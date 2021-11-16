@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="tk.Toplevel" id="MainApp">
+    <property name="geometry">320x220</property>
+    <property name="height">200</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">(De)Crypter</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Labelframe" id="lfr_inputfile">
+        <property name="height">50</property>
+        <property name="text" translatable="yes">Input File:</property>
+        <property name="width">200</property>
+        <layout manager="place">
+          <property name="anchor">center</property>
+          <property name="relwidth">1.0</property>
+          <property name="relx">0.5</property>
+          <property name="rely">0.22</property>
+          <property name="x">0</property>
+          <property name="y">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Entry" id="ent_filepath">
+            <property name="state">readonly</property>
+            <property name="text" translatable="yes">Choose file to (de)crypt...</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="ipady">2</property>
+              <property name="propagate">True</property>
+              <property name="side">left</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="but_inpath">
+            <property name="command" type="command" cbtype="simple">cmd_openfile</property>
+            <property name="text" translatable="yes">Open...</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">right</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Labelframe" id="lfr_kf">
+        <property name="height">50</property>
+        <property name="text" translatable="yes">Key File:</property>
+        <property name="width">200</property>
+        <layout manager="place">
+          <property name="anchor">center</property>
+          <property name="relwidth">1.0</property>
+          <property name="relx">0.5</property>
+          <property name="rely">0.45</property>
+          <property name="x">0</property>
+          <property name="y">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Entry" id="ent_kf">
+            <property name="state">readonly</property>
+            <property name="text" translatable="yes">Choose KeyFile...</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="ipady">2</property>
+              <property name="propagate">True</property>
+              <property name="side">left</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button2">
+            <property name="command" type="command" cbtype="simple">cmd_openkf</property>
+            <property name="text" translatable="yes">Open...</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">right</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Labelframe" id="lfr_actions">
+        <property name="height">50</property>
+        <property name="labelanchor">n</property>
+        <property name="text" translatable="yes">Actions:</property>
+        <property name="width">200</property>
+        <layout manager="place">
+          <property name="anchor">center</property>
+          <property name="relwidth">1.0</property>
+          <property name="relx">0.5</property>
+          <property name="rely">0.68</property>
+          <property name="x">0</property>
+          <property name="y">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Button" id="btn_dec">
+            <property name="command" type="command" cbtype="simple">cmd_dec</property>
+            <property name="state">disabled</property>
+            <property name="text" translatable="yes">Decrypt...</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="propagate">True</property>
+              <property name="side">right</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btn_enc">
+            <property name="command" type="command" cbtype="simple">cmd_enc</property>
+            <property name="state">disabled</property>
+            <property name="text" translatable="yes">Encrypt</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="propagate">True</property>
+              <property name="side">left</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btn_genKF">
+            <property name="command" type="command" cbtype="simple">cmd_genKF</property>
+            <property name="text" translatable="yes">Gen Key</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="propagate">True</property>
+              <property name="side">right</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Labelframe" id="lfr_general">
+        <property name="height">50</property>
+        <property name="labelanchor">n</property>
+        <property name="width">200</property>
+        <layout manager="place">
+          <property name="anchor">s</property>
+          <property name="relwidth">1.0</property>
+          <property name="relx">0.5</property>
+          <property name="rely">1.0</property>
+          <property name="x">0</property>
+          <property name="y">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Button" id="btn_close">
+            <property name="command" type="command" cbtype="simple">cmd_close</property>
+            <property name="text" translatable="yes">Exit</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="propagate">True</property>
+              <property name="side">right</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btn_openout">
+            <property name="command" type="command" cbtype="simple">cmd_openout</property>
+            <property name="state">disabled</property>
+            <property name="text" translatable="yes">Open File</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="propagate">True</property>
+              <property name="side">left</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_title">
+        <property name="font">{calibri} 16 {bold}</property>
+        <property name="justify">center</property>
+        <property name="text" translatable="yes">Fernet Encrypter/Decrypter</property>
+        <layout manager="pack">
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
