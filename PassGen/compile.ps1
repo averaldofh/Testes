@@ -1,0 +1,1 @@
+pyinstaller --noconfirm --onefile --windowed --clean --log-level "WARN" passgen.py
